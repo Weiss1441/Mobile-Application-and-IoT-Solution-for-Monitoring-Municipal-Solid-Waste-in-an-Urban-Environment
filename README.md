@@ -1,0 +1,2 @@
+# Mobile-Application-and-IoT-Solution-for-Monitoring-Municipal-Solid-Waste-in-an-Urban-Environment
+The project is a comprehensive software and hardware solution designed to automate municipal waste collection. The system integrates IoT devices for real-time measurement of waste container fill levels, a cloud server for data collection and analysis, and a mobile application for monitoring and logistics management.
