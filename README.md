@@ -81,7 +81,7 @@ Hardware node development (microcontroller + sonar), data transmission configura
 
 * **Issue Tracker (YouTrack):** \[Link to YouTrack Project\]
 
-* **Project Documentation:** \[Link to Docs/Diagrams\]
+* **Project Documentation:** \[Link to Docs/Diagrams](https://docs.google.com/document/d/1As0b-jRRA0_oz-xtH2dIXcvLWc7Zs5pZ/edit)\]
 
 * **UI Mockups / Prototype:** \[Link to Figma/Mockups\]
 
