@@ -83,7 +83,7 @@ Hardware node development (microcontroller + sonar), data transmission configura
 
 * **Project Documentation:** \[Link to Docs/Diagrams\]
 
-* **UI Mockups / Prototype:** \[Link to Figma/Mockups\]
+* **UI Mockups / Prototype:** \ https://www.figma.com/design/lfBwxZg5EPVAZkzUur6LGe/SMA?node-id=0-1&t=wgl1BGNu7e87YclG-1
 
 ## Setup, Execution, and Testing Instructions
 
