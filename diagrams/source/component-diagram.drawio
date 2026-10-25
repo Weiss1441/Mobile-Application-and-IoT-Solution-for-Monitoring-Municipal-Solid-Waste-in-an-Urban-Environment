@@ -1,0 +1,71 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="component-diagram-draft" name="Component Diagram Draft">
+    <mxGraphModel dx="1451" dy="742" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sensor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3ECF8;strokeColor=#7030A0;fontColor=#29213A;fontSize=16;" value="ESP32 Sensor Node&lt;br&gt;Measure fill level" vertex="1">
+          <mxGeometry height="85" width="200" x="50" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="ultrasonic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3ECF8;strokeColor=#7030A0;fontColor=#29213A;fontSize=16;" value="Ultrasonic Fill-Level Sensor" vertex="1">
+          <mxGeometry height="70" width="200" x="50" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="transport" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3ECF8;strokeColor=#7030A0;fontColor=#29213A;fontSize=16;" value="Telemetry Transport&lt;br&gt;MQTT Broker or HTTP Endpoint" vertex="1">
+          <mxGeometry height="85" width="220" x="290" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3ECF8;strokeColor=#7030A0;fontColor=#29213A;fontSize=16;" value="Backend API&lt;br&gt;FastAPI / validation" vertex="1">
+          <mxGeometry height="85" width="220" x="640" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="app" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3ECF8;strokeColor=#7030A0;fontColor=#29213A;fontSize=16;newEdgeStyle=%7B%22edgeStyle%22%3A%22orthogonalEdgeStyle%22%2C%22rounded%22%3A%221%22%2C%22orthogonalLoop%22%3A%221%22%2C%22jettySize%22%3A%22auto%22%2C%22html%22%3A%221%22%2C%22strokeColor%22%3A%22%237030A0%22%2C%22strokeWidth%22%3A%222%22%2C%22endArrow%22%3A%22block%22%2C%22endFill%22%3A%221%22%2C%22fontColor%22%3A%22%2329213A%22%2C%22fontSize%22%3A%2212%22%2C%22defaultLabelBackgroundColor%22%3Anull%7D;" value="Flutter Mobile App&lt;br&gt;Map / status / analytics" vertex="1">
+          <mxGeometry height="85" width="220" x="830" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3ECF8;strokeColor=#7030A0;fontColor=#29213A;fontSize=16;" value="Analytics &amp; Alert Logic&lt;br&gt;Thresholds / summaries" vertex="1">
+          <mxGeometry height="85" width="220" x="480" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3ECF8;strokeColor=#7030A0;fontColor=#29213A;fontSize=16;" value="PostgreSQL Database&lt;br&gt;Containers / telemetry / users / alerts" vertex="1">
+          <mxGeometry height="95" width="260" x="960" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="100" edge="1" parent="1" source="ultrasonic" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7030A0;strokeWidth=2;endArrow=block;endFill=1;fontColor=#29213A;fontSize=12;" target="sensor" value="Fill-level measurement">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="101" edge="1" parent="1" source="sensor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7030A0;strokeWidth=2;endArrow=block;endFill=1;fontColor=#29213A;fontSize=12;" target="transport" value="Telemetry data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="102" edge="1" parent="1" source="transport" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7030A0;strokeWidth=2;endArrow=block;endFill=1;fontColor=#29213A;fontSize=12;" target="api" value="Telemetry (JSON)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="105" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7030A0;strokeWidth=2;endArrow=block;endFill=1;fontColor=#29213A;fontSize=12;" target="db" value="Store / query">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="106" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7030A0;strokeWidth=2;endArrow=block;endFill=1;fontColor=#29213A;fontSize=12;" target="analytics" value="Evaluate thresholds">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="107" edge="1" parent="1" source="analytics" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7030A0;strokeWidth=2;endArrow=block;endFill=1;fontColor=#29213A;fontSize=12;" target="db" value="Save alerts / analytics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="103" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7030A0;strokeWidth=2;endArrow=block;endFill=1;fontColor=#29213A;fontSize=12;" value="JSON responses">
+          <mxGeometry relative="1" x="-0.1692" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="910" y="190" />
+              <mxPoint x="720" y="190" />
+            </Array>
+            <mxPoint x="910" y="155" as="sourcePoint" />
+            <mxPoint x="720" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hiGgyaWClY75x5WO7WV_-114" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7030A0;strokeWidth=2;endArrow=block;endFill=1;fontColor=#29213A;fontSize=12;entryX=0.649;entryY=0.974;entryDx=0;entryDy=0;entryPerimeter=0;" target="app" value="HTTPS REST requests">
+          <mxGeometry relative="1" x="-0.0909" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="780" y="250" />
+              <mxPoint x="972.8" y="250" />
+            </Array>
+            <mxPoint x="1010" y="190" as="sourcePoint" />
+            <mxPoint x="820" y="325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
